@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="loginjs.js" defer></script>
+</head>
+<body class="dashboard-page" data-role="super-admin">
+    <main class="dashboard-shell">
+        <section class="dashboard-head">
+            <p class="eyebrow">Super Admin</p>
+            <h1>Full Garage Control Panel</h1>
+            <p class="dashboard-copy">Access higher-level motorcycle shop controls and staff management.</p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span>Total Users</span>
+                <strong id="superadmin-user-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Inventory Items</span>
+                <strong id="superadmin-inventory-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Services Live</span>
+                <strong id="superadmin-service-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Appointments</span>
+                <strong id="superadmin-appointment-count">0</strong>
+            </article>
+        </section>
+
+        <section class="dashboard-toolbar">
+            <button class="tab-button active" type="button" data-panel-target="users-panel">User Management</button>
+            <button class="tab-button" type="button" data-panel-target="inventory-panel">Inventory Management</button>
+            <button class="tab-button" type="button" data-panel-target="services-panel">Services Management</button>
+            <button class="tab-button logout-tab" type="button" onclick="logOut()">Logout</button>
+        </section>
+
+        <section class="dashboard-panel active" id="users-panel">
+            <div class="panel-head">
+                <h2>User Management</h2>
+                <p>Current platform roles and account access overview.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card"><h3>Super Admin</h3><p>1 active account</p></article>
+                <article class="dashboard-card"><h3>Admin</h3><p>1 active account</p></article>
+                <article class="dashboard-card"><h3>User</h3><p>Open booking access for customers</p></article>
+            </div>
+        </section>
+
+        <section class="dashboard-panel" id="inventory-panel">
+            <div class="panel-head">
+                <h2>Inventory Management</h2>
+                <p>View stock health for essential motorcycle parts and supplies.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card"><h3>Wiring Kits</h3><p>0 sets in stock</p></article>
+                <article class="dashboard-card"><h3>Auxiliary Lights</h3><p>0 units in stock</p></article>
+                <article class="dashboard-card"><h3>Fork Oil</h3><p>0 bottles in stock</p></article>
+                <article class="dashboard-card"><h3>S-Oil 7</h3><p>12 bottles in stock</p></article>
+            </div>
+        </section>
+
+        <section class="dashboard-panel" id="services-panel">
+            <div class="panel-head">
+                <h2>Services Management</h2>
+                <p>Active services available inside the user booking dashboard.</p>
+            </div>
+            <div class="dashboard-list" id="superadmin-services-list"></div>
+        </section>
+    </main>
+</body>
+</html>
