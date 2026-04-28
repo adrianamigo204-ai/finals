@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="loginjs.js" defer></script>
+</head>
+<body class="dashboard-page" data-role="admin">
+    <main class="dashboard-shell">
+        <section class="dashboard-head">
+            <p class="eyebrow">Admin Panel</p>
+            <h1>Garage Operations Dashboard</h1>
+            <p class="dashboard-copy">Manage daily motorcycle shop activity from one clean admin view.</p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span>Total Inventory</span>
+                <strong id="admin-inventory-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Services Offered</span>
+                <strong id="admin-service-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Orders Today</span>
+                <strong id="admin-order-count">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Pending Jobs</span>
+                <strong id="admin-pending-count">0</strong>
+            </article>
+        </section>
+
+        <section class="dashboard-toolbar">
+            <button class="tab-button active" type="button" data-panel-target="inventory-panel">Inventory Management</button>
+            <button class="tab-button" type="button" data-panel-target="services-panel">Services Management</button>
+            <button class="tab-button" type="button" data-panel-target="orders-panel">Order Management</button>
+            <button class="tab-button" type="button" data-panel-target="reports-panel">Reports</button>
+            <button class="tab-button logout-tab" type="button" onclick="logOut()">Logout</button>
+        </section>
+
+        <section class="dashboard-panel active" id="inventory-panel">
+            <div class="panel-head">
+                <h2>Inventory Management</h2>
+                <p>Track stock and quick restock status for the garage.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card"><h3>CVT Belt</h3><p>18 pieces available</p></article>
+                <article class="dashboard-card"><h3>Engine Oil</h3><p>42 bottles available</p></article>
+                <article class="dashboard-card"><h3>Gear Oil</h3><p>16 sets available</p></article>
+                <article class="dashboard-card"><h3>S oil 7</h3><p>9 kits available</p></article>
+            </div>
+        </section>
+
+        <section class="dashboard-panel" id="services-panel">
+            <div class="panel-head">
+                <h2>Services Management</h2>
+                <p>Review active services currently visible to customers.</p>
+            </div>
+            <div class="dashboard-list" id="admin-services-list"></div>
+        </section>
+
+        <section class="dashboard-panel" id="orders-panel">
+            <div class="panel-head">
+                <h2>Order Management</h2>
+                <p>Customer schedules submitted from the booking page appear here.</p>
+            </div>
+            <div class="dashboard-list" id="admin-orders-list"></div>
+        </section>
+
+        <section class="dashboard-panel" id="reports-panel">
+            <div class="panel-head">
+                <h2>Reports</h2>
+                <p>Quick summary of bookings and most requested work.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card">
+                    <h3>Most Requested</h3>
+                    <p id="admin-top-service">No bookings yet</p>
+                </article>
+                <article class="dashboard-card">
+                    <h3>Upcoming Bookings</h3>
+                    <p id="admin-upcoming-bookings">0 appointments scheduled</p>
+                </article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
