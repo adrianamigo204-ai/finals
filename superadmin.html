@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Super Admin Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <main class="dashboard-shell">
+        <section class="dashboard-head">
+            <p class="eyebrow">Super Admin</p>
+            <h1>Full Garage Control Panel</h1>
+            <p class="dashboard-copy">Access higher-level motorcycle shop controls and staff management.</p>
+        </section>
+
+        <section class="stats-grid">
+            <article class="stat-card">
+                <span>Total Users</span>
+                <strong>3</strong>
+            </article>
+            <article class="stat-card">
+                <span>Inventory Items</span>
+                <strong>85</strong>
+            </article>
+            <article class="stat-card">
+                <span>Services Live</span>
+                <strong>12</strong>
+            </article>
+            <article class="stat-card">
+                <span>Appointments</span>
+                <strong>2</strong>
+            </article>
+        </section>
+
+        <nav class="dashboard-toolbar" aria-label="Super admin sections">
+            <a class="tab-button" href="#users-panel">User Management</a>
+            <a class="tab-button" href="#inventory-panel">Inventory Management</a>
+            <a class="tab-button" href="#services-panel">Services Management</a>
+            <a class="tab-button logout-tab" href="login.html">Logout</a>
+        </nav>
+
+        <section class="dashboard-panel static-panel" id="users-panel">
+            <div class="panel-head">
+                <h2>User Management</h2>
+                <p>Current platform roles and account access overview.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card"><h3>Super Admin</h3><p>1 active account</p></article>
+                <article class="dashboard-card"><h3>Admin</h3><p>1 active account</p></article>
+                <article class="dashboard-card"><h3>User</h3><p>Open booking access for customers</p></article>
+            </div>
+        </section>
+
+        <section class="dashboard-panel static-panel" id="inventory-panel">
+            <div class="panel-head">
+                <h2>Inventory Management</h2>
+                <p>View stock health for essential motorcycle parts and supplies.</p>
+            </div>
+            <div class="dashboard-grid">
+                <article class="dashboard-card"><h3>Wiring Kits</h3><p>0 sets in stock</p></article>
+                <article class="dashboard-card"><h3>Auxiliary Lights</h3><p>0 units in stock</p></article>
+                <article class="dashboard-card"><h3>Fork Oil</h3><p>0 bottles in stock</p></article>
+                <article class="dashboard-card"><h3>S-Oil 7</h3><p>12 bottles in stock</p></article>
+            </div>
+        </section>
+
+        <section class="dashboard-panel static-panel" id="services-panel">
+            <div class="panel-head">
+                <h2>Services Management</h2>
+                <p>Active services available inside the user booking dashboard.</p>
+            </div>
+            <div class="dashboard-list">
+                <article class="list-row"><h3>CVT Cleaning</h3><p>Routine cleaning for smoother transmission response and better daily performance.</p></article>
+                <article class="list-row"><h3>CVT Check Up</h3><p>Full CVT inspection to catch wear early and keep the ride reliable.</p></article>
+                <article class="list-row"><h3>CVT Upgrade</h3><p>Performance upgrades for stronger acceleration and cleaner power delivery.</p></article>
+                <article class="list-row"><h3>REWIRING</h3><p>Complete rewiring service for damaged, old, or unsafe electrical setups.</p></article>
+                <article class="list-row"><h3>Wiring Check Up</h3><p>Electrical system inspection for lights, switches, battery, and charging.</p></article>
+                <article class="list-row"><h3>Installation of Horn/Auxilliary Lights</h3><p>Clean fitment for louder horns and brighter auxiliary lighting.</p></article>
+                <article class="list-row"><h3>Installation of Pipe/Swing Arm/Topbox</h3><p>Careful installation for exhausts, swing arms, and top boxes.</p></article>
+                <article class="list-row"><h3>Refresh Engine</h3><p>Engine refresh service to restore smoothness, response, and dependability.</p></article>
+                <article class="list-row"><h3>Engine Upgrade</h3><p>Upgrade internal parts and tuning for a stronger engine setup.</p></article>
+                <article class="list-row"><h3>Repacking of Front Shock</h3><p>Front shock service to improve comfort, control, and oil sealing.</p></article>
+                <article class="list-row"><h3>Change Oil/Engine Oil/Gear Oil</h3><p>Fresh fluids for cleaner running, smoother shifting, and engine protection.</p></article>
+                <article class="list-row"><h3>Race Bike</h3><p>Track-focused preparation for riders building a faster, sharper race machine.</p></article>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
