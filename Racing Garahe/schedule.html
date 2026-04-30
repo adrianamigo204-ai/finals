@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Service</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="dashboard-page">
+    <main class="dashboard-shell">
+        <section class="dashboard-head">
+            <p class="eyebrow">Scheduling</p>
+            <h1>Book Motorcycle Service</h1>
+            <p class="dashboard-copy">Choose your preferred service, date, and time for your motorcycle appointment.</p>
+        </section>
+
+        <form class="schedule-form" action="schedule-success.html" method="get">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="text" name="motorcycle" placeholder="Motorcycle Model" required>
+            <select name="service" required>
+                <option value="">Select Service</option>
+                <option>CVT Cleaning</option>
+                <option>CVT Check Up</option>
+                <option>CVT Upgrade</option>
+                <option>REWIRING</option>
+                <option>Wiring Check Up</option>
+                <option>Installation of Horn/Auxilliary Lights</option>
+                <option>Installation of Pipe/Swing Arm/Topbox</option>
+                <option>Refresh Engine</option>
+                <option>Engine Upgrade</option>
+                <option>Repacking of Front Shock</option>
+                <option>Change Oil/Engine Oil/Gear Oil</option>
+                <option>Race Bike</option>
+            </select>
+            <input type="date" name="date" required>
+            <input type="time" name="time" required>
+            <textarea name="notes" placeholder="Extra notes about your motorcycle"></textarea>
+            <div class="action-row">
+                <button class="button-link" type="submit">Submit Appointment</button>
+                <a class="button-link secondary-button" href="user.html">Back to Services</a>
+            </div>
+            <p class="form-message">Appointments go to a confirmation page after submission.</p>
+        </form>
+    </main>
+</body>
+</html>
