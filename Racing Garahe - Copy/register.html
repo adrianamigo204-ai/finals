@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Racing Garahe Register</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <nav class="nav login-nav">
+        <a class="brand" href="index.html">Racing Garahe</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About Us</a>
+            <a href="index.html#service">Service</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <main class="login-panel">
+        <h1>Create Account</h1>
+        <p>Register to access bookings, service updates, and your motorcycle garage account.</p>
+        <p class="privacy-note">Privacy notice: the information you submit is used only for account setup, contact, and secure access to your garage profile.</p>
+
+        <form class="login-form" action="register-success.html" method="get">
+            <input type="text" name="fullname" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="username" placeholder="Choose a Username" required>
+            <input type="password" name="password" placeholder="Create a Password" required>
+            <button type="submit">Register</button>
+        </form>
+
+        <p class="auth-switch">Already have an account? <a href="login.html">Login here</a>.</p>
+       
+    </main>
+</body>
+</html>
